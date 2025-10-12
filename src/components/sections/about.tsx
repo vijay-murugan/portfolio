@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { getBasePath } from '@/lib/utils';
 
 export default function About() {
   const profilePic = PlaceHolderImages.find(p => p.id === 'profile-pic');
@@ -58,7 +59,7 @@ export default function About() {
             whileTap={{ scale: 0.95 }}
           >
             <Button asChild className="w-full md:w-auto">
-              <a href="/VijayMurugan_AppavuSivaprakasam.pdf" download>
+              <a href={getBasePath("/VijayMurugan_AppavuSivaprakasam.pdf")} download>
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </a>

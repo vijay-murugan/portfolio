@@ -5,7 +5,6 @@ const nextConfig = {
   trailingSlash: true,
   // Configure base path for GitHub Pages
   basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
   
   // App directory is now stable, no experimental config needed
   images: {
