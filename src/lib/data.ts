@@ -16,7 +16,6 @@ export const PROJECTS = [
     tags: ["React", "MongoDB", "NGINX", "Firebase"],
     repoUrl: "https://github.com/vijay-murugan/logolego",
     liveUrl: null,
-    imageId: "project-1",
   },
   {
     id: "proj-2",
@@ -25,6 +24,5 @@ export const PROJECTS = [
     tags: ["Python", "Fast API", "ML", "TypeScript", "Firebase"],
     repoUrl: "https://github.com/vijay-murugan/movie-recommendation",
     liveUrl: null,
-    imageId: "project-2",
   }
 ];

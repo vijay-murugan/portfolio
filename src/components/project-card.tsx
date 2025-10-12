@@ -1,12 +1,10 @@
 'use client';
 
 import type { FC } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Github, ExternalLink } from 'lucide-react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useRef, useState } from 'react';
@@ -18,7 +16,6 @@ type Project = {
   tags: string[];
   repoUrl: string | null;
   liveUrl: string | null;
-  imageId: string;
 };
 
 interface ProjectCardProps {
@@ -112,8 +109,6 @@ function TiltCard({ children, index }: {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
-  const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
-
   return (
     <TiltCard index={index}>
       <Card className="flex h-full transform-gpu flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl relative border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/20"
@@ -147,23 +142,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
           }}
         />
         
-        {projectImage && (
-          <div className="relative h-48 w-full overflow-hidden">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-              className="h-full w-full"
-            >
-              <Image
-                src={projectImage.imageUrl}
-                alt={`Screenshot of ${project.title}`}
-                fill
-                className="object-cover"
-                data-ai-hint={projectImage.imageHint}
-              />
-            </motion.div>
-          </div>
-        )}
         <CardHeader>
           <CardTitle className="font-headline">{project.title}</CardTitle>
         </CardHeader>
