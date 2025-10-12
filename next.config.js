@@ -19,19 +19,12 @@ const nextConfig = {
       },
     ],
   },
-  // Disable dev tools and development overlays
-  experimental: {
-    devOverlays: false,
-  },
   // Disable React DevTools in production
   reactStrictMode: false,
   // Disable source maps in development
   productionBrowserSourceMaps: false,
-  // Disable webpack dev middleware overlay
-  devIndicators: {
-    buildActivity: false,
-    buildActivityPosition: 'bottom-right',
-  },
 }
+
+module.exports = nextConfig
 
 module.exports = nextConfig

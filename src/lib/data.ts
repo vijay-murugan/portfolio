@@ -15,6 +15,8 @@ export const PROJECTS = [
     summary: "Engineered a scalable React.js application with Firebase authentication serving 250+ users at 99% reliability, integrating Google Favicon API, MongoDB storage, and canvas-based development tools to build flow-charts with company logos.",
     tags: ["React", "MongoDB", "NGINX", "Firebase"],
     repoUrl: "https://github.com/vijay-murugan/logolego",
+    liveUrl: null,
+    imageId: "project-1",
   },
   {
     id: "proj-2",
@@ -22,5 +24,7 @@ export const PROJECTS = [
     summary: "Built a personalized movie recommendation system by training a hybrid ML model combining K-means and cosine similarity. Deployed with Fast API backend, TypeScript frontend, and Firebase authentication to deliver over 90% accurate suggestions.",
     tags: ["Python", "Fast API", "ML", "TypeScript", "Firebase"],
     repoUrl: "https://github.com/vijay-murugan/movie-recommendation",
+    liveUrl: null,
+    imageId: "project-2",
   }
 ];
