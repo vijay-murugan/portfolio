@@ -7,16 +7,6 @@ export type ImagePlaceholder = {
   imageHint: string;
 };
 
-// Add base path for local images when in production build
-const isProduction = typeof window === 'undefined' ? 
-  process.env.NODE_ENV === 'production' : 
-  window.location.pathname.startsWith('/portfolio');
-
-const basePath = isProduction ? '/portfolio' : '';
-
-const processedImages = data.placeholderImages.map(image => ({
-  ...image,
-  imageUrl: image.imageUrl.startsWith('/') ? `${basePath}${image.imageUrl}` : image.imageUrl
-}));
-
-export const PlaceHolderImages: ImagePlaceholder[] = processedImages;
+// Use the images directly from the JSON without any path manipulation
+// Next.js will handle the base path automatically for static files
+export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;
