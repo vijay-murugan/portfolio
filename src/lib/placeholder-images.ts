@@ -7,12 +7,4 @@ export type ImagePlaceholder = {
   imageHint: string;
 };
 
-// Add base path for local images in production
-const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
-
-const processedImages = data.placeholderImages.map(image => ({
-  ...image,
-  imageUrl: image.imageUrl.startsWith('/') ? `${basePath}${image.imageUrl}` : image.imageUrl
-}));
-
-export const PlaceHolderImages: ImagePlaceholder[] = processedImages;
+export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;

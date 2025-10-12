@@ -8,6 +8,16 @@ import { cn } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Backend & AI Engineer',
   description: 'Portfolio of a backend software engineer with AI experience.',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

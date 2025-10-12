@@ -33,12 +33,16 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Image
-                src={profilePic.imageUrl}
-                alt="Profile picture of Vijay Murugan Appavu Sivaprakasam"
+                src={getBasePath(profilePic.imageUrl)}
+                alt="Vijay Murugan Appavu Sivaprakasam"
                 width={200}
                 height={200}
                 className="rounded-full object-cover"
                 data-ai-hint={profilePic.imageHint}
+                priority
+                onError={(e) => {
+                  console.error('Failed to load profile image:', getBasePath(profilePic.imageUrl));
+                }}
               />
             </motion.div>
           )}
