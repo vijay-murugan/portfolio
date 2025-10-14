@@ -16,7 +16,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.p 
-            className="font-headline text-primary text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold"
+            className="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-emerald-400 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -58,7 +58,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button asChild variant="outline" size="lg">
+            <Button asChild size="lg">
               <Link href="#experience">Experience</Link>
             </Button>
           </motion.div>
@@ -66,7 +66,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button asChild variant="secondary" size="lg">
+            <Button asChild size="lg">
               <Link href="#contact">Get In Touch</Link>
             </Button>
           </motion.div>

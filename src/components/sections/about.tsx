@@ -54,8 +54,8 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h2 className="font-headline text-2xl font-bold">Vijay Murugan Appavu Sivaprakasam</h2>
-            <p className="text-muted-foreground">Backend & AI Engineer</p>
+            <h2 className="font-headline text-2xl font-bold ">Vijay Murugan Appavu Sivaprakasam</h2>
+            <p className="text-muted-foreground text-lg font-medium">Backend & AI Engineer</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

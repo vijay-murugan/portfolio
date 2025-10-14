@@ -42,6 +42,12 @@ function TiltCard({ children, index }: {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
+    
+    // Don't apply tilt if hovering over buttons
+    const target = e.target as HTMLElement;
+    if (target.closest('button') || target.closest('a')) {
+      return;
+    }
 
     const rect = ref.current.getBoundingClientRect();
     const width = rect.width;
@@ -153,10 +159,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
             ))}
           </div>
         </CardContent>
-        <CardFooter className="flex justify-end gap-2">
+        <CardFooter className="flex justify-end gap-2 relative z-10">
           {project.repoUrl && (
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="ghost" size="sm" asChild>
+              <Button variant="ghost" size="sm" asChild className="pointer-events-auto">
                 <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" /> Code
                 </Link>
@@ -165,7 +171,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
           )}
           {project.liveUrl && (
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="default" size="sm" asChild>
+              <Button variant="default" size="sm" asChild className="pointer-events-auto">
                 <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
                 </Link>
