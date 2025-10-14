@@ -16,10 +16,8 @@ export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  // Handle resume path for GitHub Pages
-  const resumePath = typeof window !== 'undefined' && window.location.pathname.startsWith('/portfolio') 
-    ? '/portfolio/VijayMurugan_AppavuSivaprakasam.pdf' 
-    : '/VijayMurugan_AppavuSivaprakasam.pdf';
+
+  const resumePath = '/portfolio/VijayMurugan_AppavuSivaprakasam.pdf' ;
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32" ref={ref}>
