@@ -17,8 +17,8 @@ export default function About() {
   const isInView = useInView(ref, { once: true });
 
 
-  const resumePath = '/resumes/Vijaymurugan_AppavuSivaprakasam.pdf';
-  const mlResumePath = '/resumes/Vijay_Murugan_ML.pdf';
+  const resumePath = '/portfolio/resumes/Vijaymurugan_AppavuSivaprakasam.pdf';
+  const mlResumePath = '/portfolio/resumes/ML_Resume.pdf';
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32" ref={ref}>
@@ -73,7 +73,7 @@ export default function About() {
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button asChild className="w-full md:w-auto">
+              <Button asChild variant="outline" className="w-full md:w-auto">
                 <a href={mlResumePath} download>
                   <Download className="mr-2 h-4 w-4" />
                   ML Resume
