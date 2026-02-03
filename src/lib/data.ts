@@ -10,6 +10,24 @@ export const SKILLS = {
 
 export const PROJECTS = [
   {
+    id: "proj-5",
+    title: "Adversarial Attack and Defense Analysis ",
+    summary: "Implemented diffusion based Generative AI adversarial attacks on images and through loss function optimization by modifying cross-entropy loss to Carlini & Wagner loss, improving the attack transferability by 39%. Researched about various image immunization techniques including PhotoGuard, AdvPaint, and DiffusionGuard, evaluated PhotoGuard on a small subset of images, achieving a success rate of 96.67% in preventing attacks",
+    tags: ["Stable Diffusion", "PyTorch", "Computer Vision", "Python", "Machine Learning", "Generative AI", "AI Security", "Adversarial Attacks", "AI Defense"],
+    repoUrl: "https://github.com/gavingleinig/semantic-transformation-adv-attack/tree/vijay",
+    liveUrl: null,
+    imageId: "project-5",
+  },
+  {
+    id: "proj-7",
+    title: "Visual SketchPad Implementation and Benchmarking ",
+    summary: "Evaluated a visual chain-of-thought framework on the Path-VQA dataset containing 6k+ pathology Q&A pairs, focusing on yes/no accuracy and qualitative reasoning quality. Benchmarked GPT-4o, GPT-3.5-mini, Gemini-2.5-Flash, and BLIP-VQA models on medical visual reasoning, analyzing performance gaps and model strengths across tasks and reported a 10% improvement over baseline reasoning performance",
+    tags: ["Visual Chain-of-Thought", "Gemini-2.5-Flash", "GPT-4o", "Path-VQA Dataset", "Medical Visual Reasoning", "Computer Vision"],
+    repoUrl: "https://github.com/vijay-murugan/Visual-Chain-of-Thought",
+    liveUrl: null,
+    imageId: "project-7",
+  },
+  {
     id: "proj-4",
     title: "Automated Shopping Cart",
     summary: "Engineered an ML-based Android + IoT system for grocery classification and weight detection, achieving 95%+ accuracy, 98% precision, and 90%+ real-world accuracy using custom datasets and ensemble models (EfficientNetV2, MobileNetV2)\n"
@@ -18,6 +36,24 @@ export const PROJECTS = [
     repoUrl: "https://github.com/vijay-murugan/automated-shopping-cart",
     liveUrl: null,
     imageId: "project-4",
+  },
+  {
+    id: "proj-6",
+    title: "CLIP Model Optimization ",
+    summary: "Optimized self-supervised CLIP training by testing against multiple optimizers including Adam, AdamP, and AdamW and various loss functions SogCLR and iSogCLR achieving best zero-shot top 1 accuracy of 24.45% using AdamW with SogCLR loss. Added Weights & Bias for checkpoint management to reduce the training time by 87%",
+    tags: ["CLIP", "PyTorch", "Computer Vision", "Python", "Machine Learning", "AdamW Optimizer", "Self-Supervised Learning"],
+    repoUrl: "",
+    liveUrl: null,
+    imageId: "project-6",
+  },
+  {
+    id: "proj-8",
+    title: "Bill Splitter App ",
+    summary: "Engineered a full-stack bill splitting application using FastAPI, React, and MongoDB, building 12+ API endpoints and 8+ interactive UI components for multi-user expense management, processing split transactions with automated balance tracking",
+    tags: ["FastAPI", "Python", "React", "MongoDB", "JavaScript", "Full-Stack Development"],
+    repoUrl: "https://github.com/vijay-murugan/bill-split",
+    liveUrl: null,
+    imageId: "project-8x",
   },
   {
     id: "proj-1",
@@ -45,5 +81,4 @@ export const PROJECTS = [
     liveUrl: null,
     imageId: "project-2",
   },
-  
 ];
