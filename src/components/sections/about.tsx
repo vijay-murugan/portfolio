@@ -17,7 +17,8 @@ export default function About() {
   const isInView = useInView(ref, { once: true });
 
 
-  const resumePath = '/portfolio/VijayMurugan_AppavuSivaprakasam.pdf' ;
+  const resumePath = '/resumes/Vijaymurugan_AppavuSivaprakasam.pdf';
+  const mlResumePath = '/resumes/Vijay_Murugan_ML.pdf';
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32" ref={ref}>
@@ -57,19 +58,28 @@ export default function About() {
             <h2 className="font-headline text-2xl font-bold ">Vijay Murugan Appavu Sivaprakasam</h2>
             <p className="text-muted-foreground text-lg font-medium">Backend & AI Engineer</p>
           </motion.div>
-          <motion.div
+          <motion.div 
+            className="flex flex-col gap-3 w-full md:w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
-            <Button asChild className="w-full md:w-auto">
-              <a href={resumePath} download>
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
-              </a>
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button asChild className="w-full md:w-auto">
+                <a href={resumePath} download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Backend Resume
+                </a>
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button asChild className="w-full md:w-auto">
+                <a href={mlResumePath} download>
+                  <Download className="mr-2 h-4 w-4" />
+                  ML Resume
+                </a>
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
         <motion.div 
